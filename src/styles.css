@@ -1,1 +1,117 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'comic Newe', cursive;
+  font-size: 16px;
+}
+
+body {
+  background-image: url('assets/fundo.jpg');
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  color: rgb(0, 255, 0)
+}
+
+a {
+  color: rgb(0, 255, 0);
+  text-decoration: none;
+  border-bottom: 1px dotted rgb(0, 255, 0);
+  display: inline-block;
+}
+
+a:hover {
+  color: orangered;
+  border-bottom: 1px dotted orangered;
+}
+
+/*sticky footer*/
+
+html, body, app-root {
+  position: relative;
+  height: 100%;
+}
+
+app-root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Botões genéricos*/
+
+.basic-button {
+  display: inline-block;
+  padding: .5rem 1rem;
+  color: rgb(0, 255, 0);
+  background: linear-gradient(rgb(0, 156, 0), rgb(0, 35, 0));
+  border-radius: .3rem;
+  border: none;
+}
+
+.basic-button:hover {
+  color: rgb(0, 32, 0);
+  background: linear-gradient(rgb(110, 238, 110), rgb(0, 117, 0));
+  border: none;
+}
+
+/*classes de uso geral*/
+
+.center {
+  text-align: center;
+}
+
+/*bordas das caixas*/
+
+.hborder {
+  border-left: 2px solid rgb(16, 255, 16);
+  border-right: 2px solid rgb(16, 255, 16);
+}
+
+.vborder {
+  border-top: 2px solid rgb(16, 255, 16);
+  border-bottom: 2px solid rgb(16, 255, 16);
+}
+
+.hborder, .vborder {
+  position: relative;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.7);
+}
+
+.hbd {
+  position: absolute;
+  width: .4rem;
+  height: 2px;
+  background: rgb(16, 255, 16);
+}
+.vbd {
+  position: absolute;
+  width: 2px;
+  height: .5rem;
+  background: rgb(16, 255, 16);
+}
+
+.tl {
+  top: 0;
+  left: 0;
+}
+.tr{
+  top: 0;
+  right: 0;
+}
+.br{
+  bottom: 0;
+  right: 0;
+}
+
+.bl{
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,102 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -1px -1px #040, -1px 1px #040, 1px -1px #040, 1px 1px #040;
+}
+
+header h1 {
+  margin: 1.2rem .5rem;
+  letter-spacing: 1.5px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: .5rem;
+}
+
+nav a {
+  display: block;
+  padding: .5rem;
+  text-transform: uppercase;
+  border: none;
+}
+
+nav a:hover {
+  background: rgb(0, 255, 0);
+  color: rgb(0, 70, 0);
+  border: none;
+}
+
+#links {
+  display: none;
+  position: absolute;
+  top: 2.7rem;
+  right: 0;
+  z-index: 100;
+}
+
+#links a {
+  margin: .8rem;
+  padding: .5rem 1rem;
+}
+
+main {
+  background: rgba(0, 40, 0, .9);
+  margin: 0 .8rem;
+  padding: 0 .8rem;
+}
+
+footer {
+  text-align: center;
+  padding: .6rem;
+  font-style: italic;
+  font-size: .8rem;
+}
+
+header, nav, footer, #links {
+  color: rgb(0, 255, 0);
+  background: rgba(0, 70, 0, .5);
+  margin: .8rem;
+}
+
+nav {
+  margin-top: 0;
+}
+
+#links {
+  background: rgba(0, 70, 0, .9);
+}
+
+/*sticky footer*/
+
+main {
+  flex-grow: 1;
+}
+
+/*responsividade*/
+
+@media (min-width: 512px) {
+  #menu {
+    display: none;
+  }
+  #links {
+    position: relative;
+    display: block;
+    top: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+#links div{
+  display: none;
+}
+
+  #links a{
+    margin: 0 0 0 1rem;
+    display: inline-block;
+  }
+}

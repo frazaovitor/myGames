@@ -1,5 +1,45 @@
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-      {{item.name}} - {{item.email}}
-  </li>
-</ul>
+<header class="hborder">
+  <i class="fas fa-fw fa-3x fa-gamepad"></i>
+  <h1>my Games</h1>
+  <div class="hbd tl"></div>
+  <div class="hbd tr"></div>
+  <div class="hbd bl"></div>
+  <div class="hbd br"></div>
+
+</header>
+
+<nav class="hborder">
+  <div class="hbd tl"></div>
+  <div class="hbd tr"></div>
+  <div class="hbd bl"></div>
+  <div class="hbd br"></div>
+  <a routerLink="/home"><i class="fas fa-fw fa-home"></i></a>
+
+  <div id="links" class="vborder">
+    <div class="vbd tl"></div>
+    <div class="vbd tr"></div>
+    <div class="vbd bl"></div>
+    <div class="vbd br"></div>
+    <a routerLink="/list"><i class="fas fa-fw fa-th-list"></i> Listar</a>
+    <a routerLink="/new"><i class="fas fa-fw fa-plus-circle"></i> Novo</a>
+    <a routerLink="/about"><i class="fas fa-fw fa-info-circle"></i> Sobre</a>
+  </div>
+  <a id="menu" (click)="menuToggle()"><i class="fas fa-fw fa-bars"></i></a>
+</nav>
+
+<main class="vborder">
+  <div class="vbd tl"></div>
+  <div class="vbd tr"></div>
+  <div class="vbd bl"></div>
+  <div class="vbd br"></div>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="hborder">
+  <div class="hbd tl"></div>
+  <div class="hbd tr"></div>
+  <div class="hbd bl"></div>
+  <div class="hbd br"></div>
+  <i class="far fa-fw fa-copyright"></i> 2020 Vitor Frazão.
+
+</footer>
