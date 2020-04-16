@@ -33,48 +33,46 @@ export class AppComponent implements OnInit {
             }
           }
           return this.pageTitle;
-        })).subscribe((title: any) => {
+        })
+      )
+      .subscribe((title: any) => {
         this.titleService.setTitle(title);
       });
   }
 
-  menuToggle(){
-    $(document).ready(()=> {
-       if ($('#links').is(':visible')){
-         this.menuHide();
-       }else{
-         this.menuShow();
-       }
-
+  menuToggle() {
+    $(document).ready(() => {
+      if ($('#links').is(':visible')) {
+        this.menuHide();
+      } else {
+        this.menuShow();
+      }
     });
 
-
-    return false
+    return false;
   }
-  menuHide(){
+  menuHide() {
     $('#links').slideUp('fast');
   }
-  menuShow(){
+  menuShow() {
     $('#links').slideDown('fast');
   }
   ngOnInit(): void {
     this.changeTitle();
 
     $(document).ready(() => {
-      $(window).resize(()=>{
-        if(window.innerWidth > 511){
+      $(window).resize(() => {
+        if (window.innerWidth > 511) {
           $('links').show(0);
-        }else{
+        } else {
           $('links').hide(0);
         }
       });
-
-$(document).on('click','#links>a', () =>{
-  $('#links').slideUp('fast');
-});
-
+      $(document).on('click', '#links>a', () => {
+        if(window.innerWidth<512){
+          $('#links').slideUp('fast');
+        }
+      });
     });
-
   }
-
 }
