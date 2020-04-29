@@ -1,0 +1,52 @@
+<p>Todos os campos são obrigatórios.</p>
+<form>
+
+    <p>
+        <input type="hidden" name="id">
+
+    </p>
+    <p>
+        <label for="title">Nome do Jogo:</label>
+        <input type="text" name="title" placeholder="Nome do Jogo" required>
+    </p>
+
+    <p>
+        <label for="cover">Nome da capa:</label>
+        <input type="text" name="cover" placeholder="Ex: www.site.com/capa.jpg">
+
+    </p>
+    <p>
+        <label for="description">Descrição do Jogo:</label>
+        <textarea name="description" placeholder="Descrição resumida"></textarea>
+
+    </p>
+    <p>
+        <label for="description">Descrição do Jogo:</label>
+        <textarea name="description" placeholder="Descrição resumida"></textarea>
+
+    </p>
+    <p>
+        <label for="platform">Plataforma:</label>
+        <select name="platform">
+  <option value="" desable selected>--Selecione--</option>
+  <option *ngFor="let p of platforms | async" value="{{p.name}}">{{p.name}}</option>
+  <option value="Outra">Outra</option>
+</select>
+    </p>
+
+    <p>
+        <label for="media">Tipo de midia:</label>
+        <label><input type="radio" name="media" value="Fisica">Física &nbsp;&nbsp;</label>
+        <label><input type="radio" name="media" value="Digital">Digital</label>
+    </p>
+
+    <p>
+        <label for="date">Data:</label>
+        <input type="date" name="date">
+
+    </p>
+    <p>
+        <button type="submit"><i class="fas fa-fw fa-save"></i>Salvar</button>
+
+    </p>
+</form>
