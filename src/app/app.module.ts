@@ -14,6 +14,9 @@ import { E404Component } from './e404/e404.component';
 import { AboutComponent } from './about/about.component';
 import { FormComponent } from './form/form.component';
 
+// Importa módulo de formulários dinâmicos do Angular
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,8 @@ import { FormComponent } from './form/form.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
